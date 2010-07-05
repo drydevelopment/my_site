@@ -2,6 +2,7 @@
 - rails 2.3.3
 - thoughtbot-paperclip
 - friendly_id
+- ruby-recaptcha
 
 ## Plugins
 - acts_as_taggable_on_steroids
