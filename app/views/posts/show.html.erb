@@ -35,8 +35,8 @@
 		</p>
 	</div>
 	<div class="comments">
-		<% if @post.comments %>
-			<% @post.comments.each do |comment| %>
+		<% if @post.comments.approved %>
+			<% @post.comments.approved.each do |comment| %>
 			<div class="comment">
 				<ul class="info">
 					<li class="name"><strong>

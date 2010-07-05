@@ -6,6 +6,8 @@ class Comment < ActiveRecord::Base
   validates_presence_of :comment
   validates_presence_of :name, :if => proc { |obj| obj.user_id.blank? }
   validates_presence_of :email, :if => proc { |obj| obj.user_id.blank? }
+
+  named_scope :approved, :conditions => { :is_approved => true }
   
   def website
     self[:website] unless self[:website] == ""
