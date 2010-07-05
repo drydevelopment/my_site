@@ -5,4 +5,11 @@ class Notifier < ActionMailer::Base
     subject    "New Contact Form Submission: " + contact.name
     body       contact.message
   end
+
+  def comment_notification(comment)
+	recipients 	"doug@drydevelopment.com"
+	from		comment.email
+	subject		"Comment for' #{comment.post.title}'"
+	body		comment.comment
+  end
 end

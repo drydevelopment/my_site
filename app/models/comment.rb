@@ -12,4 +12,8 @@ class Comment < ActiveRecord::Base
   def website
     self[:website] unless self[:website] == ""
   end
+
+  def after_create
+	Notifier.deliver_comment_notification(self)
+  end
 end
