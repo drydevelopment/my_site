@@ -1,0 +1,2 @@
+module PortfolioPicturesHelper
+end

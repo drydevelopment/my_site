@@ -1,0 +1,44 @@
+<div class="primary">
+	<h1>New portfolio</h1>
+	<%= flash[:warning] %>
+	<% form_for(@portfolio, :html => { :multipart => true }) do |f| %>
+		<%= f.error_messages %>
+		<p class="submit top">
+			<%= f.submit 'Create' %>
+		</p>
+		<p class="text">
+			<%= label :name, 'Name' %><br />
+			<%= f.text_field :name %>
+		</p>
+		<p class="text">
+			<%= label :url, "URL" %><br />
+			<%= f.text_field :url %>
+		</p>
+		<p>
+			<%= label :is_featured, 'Featured' %>
+			<%= f.check_box :is_featured %>
+		</p>
+		<p>
+			<%= label :description, 'Description' %><br />
+			<%= f.tinymce :description %>
+		</p>
+		<p>
+			<%= label :specs, 'Specs' %><br />
+			<%= f.tinymce :specs %>
+		</p>
+		<% fields_for :portfolio_picture, @portfolio.portfolio_pictures do |portfolio_picture| %>
+			<p>
+				<label for="portfolio_picture">Upload A Portfolio Picture</label><br />
+				<%= portfolio_picture.file_field :image %>
+			</p>
+		<% end %>
+		<p class="submit bottom">
+			<%= f.submit 'Create' %>
+		</p>
+	<% end %>
+</div>
+<div class="secondary">
+	<div class="admin back rounded">
+		<p><%= link_to '<< Back', portfolios_path, :class => "rounded" %></p>
+	</div>
+</div>

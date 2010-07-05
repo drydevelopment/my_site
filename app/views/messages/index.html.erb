@@ -1,0 +1,15 @@
+<div class="primary">
+	<h1>Messages From:</h1>
+	<% if @messages.size > 0 %>
+		<% @messages.each do |message| %>
+		<div class="post">
+		    <h3><%= link_to message.name, :action => 'show', :id => message.id %></h3>
+			<p class="published-date"><%= format_created_at_date(message.created_at) %></p>
+		    <p class="message"><%=h truncate(message.message, 120) %></p>
+		</div>
+		<% end %>
+	<% end %>
+</div>
+<div class="secondary">
+
+</div>

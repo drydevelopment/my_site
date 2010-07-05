@@ -1,0 +1,33 @@
+<div class="primary">
+	<%= flash[:warning] %>
+	<h1><%= @portfolio.name %></h1>
+	<% @portfolio.portfolio_pictures.each do |picture| %>
+		<%= image_tag picture.image.url(:medium) %>
+	<% end %>
+</div>
+<div class="secondary">
+	<% if logged_in? %>
+	<div class="admin">
+		<p class="rounded"><%= link_to 'Edit', edit_portfolio_path(@portfolio) %> | <%= link_to 'Back', portfolios_path %> | <%= link_to 'New', new_portfolio_path %></p>
+	</div>
+	<% end %>
+	<% if @portfolio.url %>
+	<div class="module website">
+		<h3>Website</h3>
+		<p><%= link_to @portfolio.url, @portfolio.url, :target => '_blank' %></p>
+	</div>
+	<% end %>
+	<% if !@portfolio.description.blank? %>
+	<div class="module description">
+		<h3>Description</h3>
+		<%= @portfolio.description %>
+	</div>
+	<% end %>
+	<% if !@portfolio.specs.blank? %>
+	<div class="module tech-specs">
+		<h3>Technical Specs</h3>
+		<%= @portfolio.specs %>
+	</div>
+	<% end %>
+</div>
+<div class="clear"></div>

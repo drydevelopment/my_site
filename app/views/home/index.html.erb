@@ -1,0 +1,45 @@
+<div id="banner" class="rounded">
+	<div class="primary">
+		<h1>Work SMARTER, not harder.</h1>
+		<p>My name is <strong>Doug Yoder</strong>, and I provide web development services to designers, programmers, agencies and businesses.  I help clients and end users reach their full potential by bringing a best-practice, framework based approach to the table.</p>
+	</div>
+	<div class="secondary">
+		<ul id="images">
+			<li><%= image_tag 'magnanni-banner.png', :alt => 'Magnanni' %></li>
+			<li><%= image_tag 'textmate-rails.jpg', :alt => 'Textmate - Ruby on Rails' %></li>
+			<li><%= image_tag 'voices-of-learners-banner.png', :alt => 'Voices of Learners' %></li>
+		</ul>
+	</div>
+</div>
+<div id="main">
+	<div id="posts" class="column rounded">
+		<h2>Blog Posts</h2>
+		<% if @posts %>
+		<ul>
+			<% @posts.each do |post| %>
+			<li><strong><%= link_to post.title, post %></strong><span>~ <%= format_created_at_date(post.created_at) %></span></li>
+			<% end %>
+		</ul>
+		<% end %>
+	</div>
+	<div id="services" class="column rounded">
+		<h2>Services</h2>
+		<ul>
+			<li><strong>Server-Side Scripting</strong></li>
+			<li><strong>Database Architecture</strong></li>
+			<li><strong>HTML / CSS / JavaScript</strong></li>
+			<li><strong>Web Design</strong></li>
+		</ul>
+	</div>
+	<div id="work" class="column rounded">
+		<h2>Work</h2>
+		<ul>
+			<% @portfolios.each do |portfolio| %>
+			<li><%= link_to image_tag(portfolio.portfolio_pictures.first.image.url(:featured)), '/work/' + portfolio.id.to_s %></li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+	
+

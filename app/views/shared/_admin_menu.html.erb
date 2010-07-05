@@ -1,0 +1,10 @@
+<div id="admin-menu">
+	<ul>
+	<% if logged_in? %>
+		<li><%= link_to 'Logout', logout_url %></li>
+	<% else %>
+		<li><%= link_to 'Login', login_url %></li>
+	<% end %>
+	</ul>
+</div>
+<div class="clear"></div>

@@ -1,0 +1,28 @@
+<% form_for :comment, @comment, :url => add_comment_post_url(@post) do |f| %>
+	<%= error_messages_for 'comment', :header_tag => "h3", :header_message => "Please Try Again", :message => nil %>	
+
+	<dl class="form">
+		<% if current_user %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<dt><%= f.label :comment, "Comment*" %></dt>
+			<dd><%= f.text_area :comment, :class => "wysiwyg" %></dd>
+		<% else %>
+			<dt><%= f.label :name, "Name*" %></dt>
+			<dd><%= f.text_field :name, :class => "text" %></dd>
+
+			<dt><%= f.label :email, "Email*" %></dt>
+			<dd><%= f.text_field :email, :class => "text" %></dd>
+
+			<dt><%= f.label :comment, "Comment*" %></dt>
+			<dd><%= f.text_area :comment, :class => "wysiwyg" %></dd>
+
+			<dt><%= f.label :website %></dt>
+			<dd><%= f.text_field :website, :class => "text" %></dd>
+		<% end %>
+
+		<%= f.hidden_field :post_id, :value => @post.id %>
+		
+		<dd><%= f.submit "Add Comment" %></dd>
+	</dl>
+
+<% end %>

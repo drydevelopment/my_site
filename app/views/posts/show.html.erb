@@ -1,0 +1,77 @@
+<% content_for :head do %>
+	<%= stylesheet_link_tag 'SyntaxHighlighter.css' %>
+	<%= javascript_include_tag 'syntax_highlighter/shCore.js' %>
+	<%= javascript_include_tag 'syntax_highlighter/shBrushRuby.js' %>
+	<%= javascript_include_tag 'syntax_highlighter/shBrushSql.js' %>
+	<%= javascript_include_tag 'syntax_highlighter/shBrushPhp.js' %>
+	<%= javascript_include_tag 'syntax_highlighter/shBrushCss.js' %>
+	<%= javascript_include_tag 'syntax_highlighter/shBrushJScript.js' %>
+	<%= javascript_include_tag 'jquery.beautyOfCode.js' %>
+	<script language="javascript">
+		dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+		dp.SyntaxHighlighter.HighlightAll('code');
+	</script>
+<% end %>
+<% content_for :jquery_document_ready do %>
+    //$.beautyOfCode.init('clipboard.swf');
+	//$("pre code").beautifyCode('sql');
+	//$.beautyOfCode.beautifyAll();
+	$(function(){
+	    $.beautyOfCode.init('clipboard.swf');
+	    $.beautyOfCode.beautifyAll();
+	});
+<% end %>
+<div class="primary">
+	<h1><%= @post.title %></h1>
+	<p class="published-date"><%= format_created_at_date(@post.created_at) %></p>
+	<div class="post">
+		<%= @post.body %>
+	</div>
+	<div class="tag-list">
+		<p>
+		<% @post.tag_list.each do |tag| %>
+			<%= link_to tag, :controller => 'posts', :action => 'tag', :id => tag %>
+		<% end %>
+		</p>
+	</div>
+	<div class="comments">
+		<% if @post.comments %>
+			<% @post.comments.each do |comment| %>
+			<div class="comment">
+				<ul class="info">
+					<li class="name"><strong>
+						<% if comment.user %>
+							<% if comment.user.website %>
+								<%= link_to comment.user.login, comment.website %>
+							<% else %>
+								<%=h comment.user.login %>
+							<% end %>
+						<% else %>
+					   		<%=h comment.name %>
+						<% end %>
+					</strong></li>
+					<li class="date"><%= format_created_at_date(comment.created_at) %></li>
+				</ul>
+				<p><%=h comment.comment %></p>
+			</div>
+			<% end %>
+		<% end %>
+		<%= render :partial => "comment_form" %>
+	</div>
+</div>
+<div class="secondary <%= 'preview' if !@post.is_published? %>">
+	<% if logged_in? %>
+	<div class="admin">
+		<p class="rounded">
+			<%= link_to 'Edit', edit_post_path(@post) %> |
+			<%= link_to 'Back', posts_path %>
+		</p>
+	</div>
+	<% end %>
+	<%= render :partial => 'related_posts_module' %>
+	<%= render :partial => 'other_posts_module' %>
+	<%= render :partial => 'tags_module' %>
+	<!-- <div class="module">
+		<h3>Archives</h3>
+	</div> -->
+</div>

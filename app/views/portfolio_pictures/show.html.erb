@@ -1,0 +1,41 @@
+<p>
+  <%= image_tag @portfolio_picture.public_filename(:thumb) %>	
+</p>
+<p>
+  <b>Parent:</b>
+  <%=h @portfolio_picture.parent_id %>
+</p>
+
+<p>
+  <b>Content type:</b>
+  <%=h @portfolio_picture.content_type %>
+</p>
+
+<p>
+  <b>Filename:</b>
+  <%=h @portfolio_picture.filename %>
+</p>
+
+<p>
+  <b>Thumbnail:</b>
+  <%=h @portfolio_picture.thumbnail %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @portfolio_picture.size %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%=h @portfolio_picture.width %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%=h @portfolio_picture.height %>
+</p>
+
+
+<%= link_to 'Edit', edit_portfolio_picture_path(@portfolio_picture) %> |
+<%= link_to 'Back', portfolio_pictures_path %>

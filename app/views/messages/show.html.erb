@@ -1,0 +1,12 @@
+<div class="primary">
+	<h1><span>Message from: </span><%=h @message.name %></h1>
+	<p class="email"><%= link_to @message.email, "mailto:#{@message.email}" %></p>
+	<p class="published-date"><%= format_created_at_date(@message.created_at) %>
+	<div class="post">
+		<p class="message"><%=h @message.message %></p>
+	</div>
+</div>
+<div class="secondary">
+	<p><%= link_to 'Edit', edit_contact_path(@message) %> |
+	<%= link_to 'Back', contacts_path %></p>
+</div>

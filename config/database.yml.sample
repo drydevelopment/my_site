@@ -1,0 +1,30 @@
+development:
+	host: 127.0.0.1
+	adapter: mysql
+	encoding: utf8
+	reconnect: false
+	database: dry_development
+	pool: 5
+	username: 
+	password: 
+
+test:
+	host: 127.0.0.1
+	adapter: mysql
+	encoding: utf8
+	reconnect: false
+	database: dry_test
+	pool: 5
+	username: 
+	password: 
+
+production:
+	adapter: mysql
+	encoding: utf8
+	reconnect: false
+	database:
+	pool: 5
+	username:
+	password:
+	host:
+	port: 3306

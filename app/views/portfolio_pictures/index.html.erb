@@ -1,0 +1,37 @@
+<h1>Portfolio Pictures</h1>
+<% for portfolio_picture in @portfolio_pictures %>
+	<%= image_tag portfolio_picture.image.url(:thumb) %>
+<% end %>
+
+<table>
+  <th>
+	<td>Portfolio ID</td>
+    <td>Parent</td>
+    <td>Content type</td>
+    <td>Filename</td>
+    <td>Thumbnail</td>
+    <td>Size</td>
+    <td>Width</td>
+    <td>Height</td>
+  </th>
+
+<% @portfolio_pictures.each do |portfolio_picture| %>
+  <tr>
+	<td><%=h portfolio_picture.portfolio_id %></td>
+    <td><%=h portfolio_picture.parent_id %></td>
+    <td><%=h portfolio_picture.content_type %></td>
+    <td><%=h portfolio_picture.filename %></td>
+    <td><%=h portfolio_picture.thumbnail %></td>
+    <td><%=h portfolio_picture.size %></td>
+    <td><%=h portfolio_picture.width %></td>
+    <td><%=h portfolio_picture.height %></td>
+    <td><%= link_to 'Show', portfolio_picture %></td>
+    <td><%= link_to 'Edit', edit_portfolio_picture_path(portfolio_picture) %></td>
+    <td><%= link_to 'Destroy', portfolio_picture, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br /> 
+
+<%= link_to 'New portfolio_picture', new_portfolio_picture_path %>

@@ -1,0 +1,23 @@
+<% content_for :head do %>
+	<%= javascript_include_tag 'jquery.plugin.labelover' %>
+<% end %>
+<% content_for :jquery_document_ready do %>
+	$('label').labelOver('over-apply');
+<% end %>
+<div class="primary">
+	<h1>Login</h1>
+	<div id="login-form" class="rounded">
+		<% form_tag session_path do -%>
+			<p class="text"><%= text_field_tag 'login' %></p>
+			<p class="text"><%= password_field_tag 'password' %></p>
+			<!-- Uncomment this if you want this functionality
+			<p><label for="remember_me">Remember me:</label>
+			<%= check_box_tag 'remember_me' %></p>
+			-->
+			<p class="submit"><%= submit_tag 'Log In' %></p>
+		<% end -%>
+	</div>
+</div>
+<div class="secondary">
+	
+</div>

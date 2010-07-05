@@ -1,0 +1,39 @@
+<div class="primary">
+	<h1>Featured Work</h1>
+	<%= flash[:warning] %>
+	<% if @featured_portfolios.size > 0 %>
+		<% i=0%>
+		<% @featured_portfolios.each do |portfolio| %>
+			<% if (@featured_portfolios.first == portfolio) or (i % 4 == 0) %>
+				<div class="portfolio-piece first">
+			<% else %>
+				<div class="portfolio-piece">
+			<% end %>
+			<% if portfolio.portfolio_pictures.size > 0 %>
+				<%= link_to image_tag(portfolio.portfolio_pictures.first.image.url(:thumb)), portfolio, :class => 'featured' %>
+				<h3><%= link_to portfolio.name, portfolio %></h3>
+				<!-- <p>TAGS: PUT TAGS HERE!</p> -->
+			<% end %>
+			</div>
+			<% i += 1 %>
+		<% end %>
+		<div class="clear"></div>
+	<% end %>
+</div>
+<div class="secondary">
+	<% if logged_in? %>
+	<div class="admin new rounded">
+		<p><%= link_to 'New Portfolio Item', new_portfolio_path, :class => 'rounded' %></p>
+	</div>
+	<div class="clear"></div>
+	<% end %>
+	<% if @not_featured_portfolios %>
+		<div class="portfolios">
+			<% @not_featured_portfolios.each do |portfolio| %>
+				<% if portfolio.portfolio_pictures.size > 0 %>
+					<p><%= link_to image_tag(portfolio.portfolio_pictures.first.image.url(:thumb)), portfolio %></p>
+				<% end %>
+			<% end %>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,12 @@
+<% if @other_posts %>
+	<% if @other_posts.size > 0 %>
+		<div class="module">
+			<h3>Other Posts</h3>
+			<ul>
+			<% @other_posts.each do |post| %>
+			<li><%= link_to post.title, post %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+<% end %>

@@ -1,0 +1,47 @@
+<% content_for :head do %>
+	<%= javascript_include_tag 'tinymce_syntax_highlighter_plugin.js' %>
+<% end %>
+<div class="primary">
+	<h1>Edit post</h1>
+	<% form_for(@post) do |f| %>
+	  <%= f.error_messages %>
+	  <p class="submit">
+	    <%= f.submit 'Save' %>
+	  </p>
+	  <p>
+		<%= f.label :is_published %>
+		<%= f.check_box :is_published %>
+	  </p>
+	  <p class="text">
+		<%= f.label :title %><br />
+		<%= f.text_field :title %>
+	  </p>
+	  <p>
+		<%= f.label :body %><br />
+		<%= f.tinymce :body %>
+	  </p>
+	  <p class="text">
+	  	<%= f.label :meta_title %><br />
+	    <%= f.text_field :meta_title %>
+	  </p>
+	  <p>
+	  	<%= f.label :meta_description %><br />
+	    <%= f.text_area :meta_description %>
+	  </p>
+	  <p>
+	  	<%= f.label :meta_keywords %><br />
+	    <%= f.text_area :meta_keywords %>
+	  </p>
+	  <p class="text">
+		<%= f.label :tag_list %>
+		<%= f.text_field :tag_list, :size => 80 %>
+	  </p>
+	  <p class="submit">
+	    <%= f.submit 'Save' %>
+	  </p>
+	<% end %>
+</div>
+<div class="secondary">
+	<%= link_to 'Show', @post %> |
+	<%= link_to 'Back', posts_path %>
+</div>

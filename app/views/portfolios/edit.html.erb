@@ -1,0 +1,54 @@
+<div class="primary">
+	<h1>Edit '<%=h @portfolio.name %>'</h1>
+	<% form_for(@portfolio) do |f| %>
+	  <%= f.error_messages %>
+		<p class="submit top">
+		  <%= f.submit 'Update' %>
+		</p>
+	  	<p class="text">
+			<%= label 'name', 'Name' %><br />
+			<%= f.text_field 'name' %>
+		</p>
+		<p class="text">
+			<%= label :url, 'URL'%><br />
+			<%= f.text_field :url %>
+		</p>
+		<p>
+			<%= label :is_featured, 'Featured' %>
+			<%= f.check_box :is_featured %>
+		</p>
+		<p>
+			<%= label 'description', 'Description' %><br />
+			<%= f.tinymce 'description' %>
+		</p>
+		<p>
+			<%= label 'specs', 'Specs' %><br />
+			<%= f.tinymce 'specs' %>
+		</p>
+		<p class="submit bottom">
+		  <%= f.submit 'Update' %>
+		</p>
+	<% end %>
+</div>
+<div class="secondary">
+	<div class="admin">
+		<p class="rounded"><%= link_to 'Show', @portfolio %> | <%= link_to 'Back', portfolios_path %></p>
+	</div>
+	<div class="module add-image">
+		<% form_for(:portfolio_picture, @portfolio_picture, :url => portfolio_pictures_path, :html => { :multipart => true }) do |f| %>
+			<h3>Add an Image</h3>
+			<%= f.hidden_field 'portfolio_id', :value => @portfolio.id.to_s %>
+			<p><%= f.file_field :image %></p>
+			<%= f.submit "Add Image" %>
+		<% end %>
+	</div>
+	<% if @portfolio.portfolio_pictures %>
+	<div class="module images">
+		<h3>Images</h3>
+		<% @portfolio.portfolio_pictures.each do |picture| %>
+		<p><%= image_tag(picture.image.url(:thumb)) %></p>
+		<p class="delete"><strong><%= link_to 'Delete', picture, :confirm => 'Are you sure?', :method => :delete %></strong></p>
+		<% end %>
+	</div>
+	<% end %>
+</div>
