@@ -22,7 +22,6 @@ class MessagesController < ApplicationController
     @message = Message.new(params[:message])
 
     if @message.save
-      Notifier.deliver_contact_form_notification(@message)
       flash[:notice] = 'Your message was successfully sent.'
       redirect_to '/contact/thank-you'
     else
