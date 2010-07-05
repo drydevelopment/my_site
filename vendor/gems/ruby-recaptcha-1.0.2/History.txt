@@ -1,0 +1,291 @@
+2009-07-24  mml  <mml>
+
+	* Rakefile, lib/ruby-recaptcha.rb, test/test_recaptcha.rb:
+	fixed some randomly failing tests
+	[31a822ec2421] [tip]
+
+2009-02-15  m  <m@loonsoft.com>
+
+	* .hgtags:
+	Added tag 1.0.0 release for changeset 19f9c037e388
+	[d4de467a907f]
+
+	* lib/ruby-recaptcha.rb:
+	fixed require line
+	[19f9c037e388] [1.0.0 release]
+
+2009-02-13  m  <m@loonsoft.com>
+
+	* Manifest.txt, README.txt, Rakefile, lib/recaptcha.rb,
+	lib/recaptcha/version.rb, lib/ruby-recaptcha.rb, script/console,
+	script/destroy, script/generate, test/test_helper.rb,
+	website/index.txt, website/javascripts/rounded_corners_lite.inc.js,
+	website/stylesheets/screen.css, website/template.rhtml:
+	updated to new version of newgem
+	[de8078de5372]
+
+2008-12-08  m  <m@loonsoft.com>
+
+	* website/index.txt, website/template.rhtml:
+	fixed js
+	[3cb43baa75ef]
+
+	* website/index.txt:
+	updated site
+	[353af929586d]
+
+	* Rakefile:
+	fix uploaded perms
+	[1bfdbd7dbf58]
+
+	* Rakefile, website/index.txt:
+	updated deploy script & site template
+	[0ed40a3c44bc]
+
+2008-12-05  m  <m@loonsoft.com>
+
+	* website/index.txt, website/template.rhtml:
+	updated website
+	[cb2384317947]
+
+2008-09-02  m  <m@loonsoft.com>
+
+	* README.txt, lib/recaptcha.rb, test/test_recaptcha.rb:
+	removed test code which seems to cause trouble with the masses
+	[201f032ce586]
+
+2008-05-30  m  <m@loonsoft.com>
+
+	* README.txt, lib/recaptcha.rb:
+	fix for loopback addr requests
+	[297ed7ad0790]
+
+2008-04-07  m  <m@loonsoft.com>
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb, website/index.txt:
+	fix for kim griggs
+	[143671e3abb0]
+
+2008-03-05  m  <m@loonsoft.com>
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb:
+	fixed bug when nil challenge string
+	[52e0ff173f56]
+
+2008-03-01  m  <m@loonsoft.com>
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb, website/index.txt:
+	integrated more patches from pv
+	[f63d820d97f9]
+
+2008-02-24  m  <m@loonsoft.com>
+
+	* lib/recaptcha.rb, website/index.txt:
+	reapplied missing patch
+	[4964962ea7be]
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb, website/index.txt:
+	patch from peter vandenberk
+	[299402495d48]
+
+2008-01-12  m  <m@loonsoft.com>
+
+	* website/index.txt:
+	website formatting
+	[0c065e76a6a8]
+
+	* website/index.txt:
+	website formatting
+	[79fe86cded6a]
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb, website/index.txt:
+	proxy support
+	[e55d02f563e4]
+
+2007-12-30  m  <m@loonsoft.com>
+
+	* scripts/txt2html, website/index.txt:
+	updated website
+	[aa2897a0b6fd]
+
+	* website/index.txt:
+	Backed out changeset 0cc68aefef09
+	[770296229d47]
+
+	* website/index.txt:
+	fixed uri
+	[0cc68aefef09]
+
+2007-12-26  m  <m@loonsoft.com>
+
+	* Rakefile, website/index.txt:
+	bleh
+	[62edd6a24d72]
+
+2007-10-08  m  <m@loonsoft.com>
+
+	* website/template.rhtml:
+	modified coda
+	[d0102db1ece1]
+
+2007-08-23  m  <m@loonsoft.com>
+
+	* lib/recaptcha.rb:
+	fix from joey geiger
+	[24e4ed5017bc]
+
+2007-06-09  m  <m@loonsoft.com>
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb:
+	error parameter no longer included when the error is blank or nil
+	[310e75fbd650]
+
+2007-06-06  m  <m@loonsoft.com>
+
+	* website/index.txt:
+	merge
+	[13de70beb380]
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb, website/index.txt:
+	Backed out changeset 5a6746ce03f73d0dd02db155816500870088bf6e
+	backout of the backout, cosby patch back in
+	[ed21f08b6331]
+
+	* website/index.txt:
+	further clarification
+	[db3308cd9f2b]
+
+	* lib/recaptcha/version.rb, website/index.txt:
+	clarification to doc
+	[0ce238b954ed]
+
+	* website/index.txt:
+	updated site
+	[b798dbd756f5]
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb, website/index.txt:
+	Backed out changeset d614a6a28630eb4dba913739518dbdc6d3aaa410
+
+	seems to be causing issues
+	[5a6746ce03f7]
+
+	* website/index.txt:
+	clarification
+	[9d2ff1293a4e]
+
+2007-05-30  m  <m@loonsoft.com>
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb, website/index.txt:
+	patch from victor cosby
+	[d614a6a28630]
+
+2007-05-29  m  <m@loonsoft.com>
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb, website/index.txt:
+	Backed out changeset 1086e6e6217f85433cc539e6d687880adc421c2f
+	[d1dc394b249b]
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb, website/index.txt:
+	reworked error handling
+	[1086e6e6217f]
+
+2007-05-27  m  <m@loonsoft.com>
+
+	* lib/recaptcha.rb:
+	removed bogon method stub
+	[5497521e6a01]
+
+	* website/index.txt:
+	fixup page
+	[99665cb4b9a1]
+
+	* website/index.txt:
+	mailhide supported
+	[4a0b9f72eede]
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb:
+	mailhide supported
+	[943383442ab0]
+
+2007-05-25  m  <m@loonsoft.com>
+
+	* website/index.txt:
+	pointer to code
+	[848e1a4c0b17]
+
+	* website/template.rhtml:
+	urchin
+	[e2b1d5e77f97]
+
+	* lib/recaptcha.rb, test/test_recaptcha.rb:
+	added cgi module, some tests
+	[a9f834ef0ffb]
+
+	* Rakefile, website/index.txt:
+	updates
+	[5f41c4ec54b2]
+
+	* Rakefile, lib/recaptcha/version.rb, scripts/txt2html:
+	updates
+	[ef9516789992]
+
+	* .hgignore, History.txt, Rakefile:
+	updates
+	[976727776d37]
+
+	* website/index.txt:
+	changed license
+	[63e4d638cbea]
+
+	* lib/recaptcha.rb, website/index.txt:
+	changed license
+	[d7dcf24bb808]
+
+	* lib/recaptcha/version.rb:
+	turned off ssl
+	[5ae4c8024402]
+
+	* lib/recaptcha.rb:
+	turned off ssl
+	[8047f6e7eceb]
+
+	* .hgtags:
+	Added tag release 1.1.2 for changeset cd3bd3392418
+	[844ac63dfb5a]
+
+	* Rakefile, scripts/txt2html:
+	update
+	[cd3bd3392418] [release 1.1.2]
+
+	* .hgignore, Rakefile, website/index.txt:
+	update
+	[3d15d7d8ff91]
+
+	* Rakefile, website/index.html, website/index.txt:
+	update
+	[6af50b34c9fa]
+
+	* lib/recaptcha.rb, lib/recaptcha/version.rb:
+	updated
+	[d28f38ac7cde]
+
+	* .hgignore:
+	ignore packages
+	[1c4ea4c672d2]
+
+	* .hgignore:
+	hgignore
+	[57e762617a54]
+
+	* lib/recaptcha.rb:
+	fixed license
+	[146d97cc2e51]
+
+	* History.txt, Manifest.txt, README.txt, Rakefile, lib/recaptcha.rb,
+	lib/recaptcha/version.rb, scripts/txt2html, setup.rb,
+	test/test_helper.rb, test/test_recaptcha.rb, website/index.html,
+	website/index.txt, website/javascripts/rounded_corners_lite.inc.js,
+	website/stylesheets/screen.css, website/template.rhtml:
+	initial
+	[1f1ba6ed3ef1]
+

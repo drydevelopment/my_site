@@ -7,6 +7,7 @@ Rails::Initializer.run do |config|
   
   config.gem 'thoughtbot-paperclip', :lib => 'paperclip', :source => 'http://gems.github.com'
   config.gem "friendly_id"
+  config.gem 'ruby-recaptcha'
 
   config.time_zone = 'UTC'
 end

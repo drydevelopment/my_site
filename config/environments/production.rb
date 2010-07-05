@@ -14,3 +14,7 @@ config.action_view.cache_template_loading            = true
 config.action_mailer.delivery_method = :test
 
 Paperclip.options[:command_path] = '/usr/bin'
+
+# reCaptcha Keys
+RCC_PUB='6LdSSLsSAAAAAM-E1rAelfXeKR6fbatb4bYXM1rZ'
+RCC_PRIV='6LdSSLsSAAAAAGHsjRXHk_HVI80uZXLNM_avr9iy'

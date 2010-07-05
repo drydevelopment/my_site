@@ -805,8 +805,13 @@ div.comments form,
 	margin: 0 0 8px 0;
 	width: 523px;
 	background: #FFF;
+	color: #666;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
+}
+#posts div.comment p {
+	font-size: 12px;
+	color: #666;
 }
 #posts div.primary div.post h3,
 #posts div.primary div.tag-list h3,
@@ -817,11 +822,6 @@ div.comments form,
 #posts div.primary div.post h2 { border-bottom: 2px solid #BBB; margin: 6px 0; }
 #posts div.primary div.post h2,
 #posts div.primary div.post h3 { padding: 6px 0 4px; font-family: Helvetica; }
-#posts div.primary div.post p,
-#posts div.primary div.post blockquote,
-#posts div.primary div.tag-list p,
-#posts div.primary div.post li,
-#contacts div.primary div.post p { }
 #posts div.primary div.tag-list p { font: italic 14px Verdana; text-align: right; }
 #posts div.primary p.published-date { color: #666; }
 #posts div.primary p.published-date,

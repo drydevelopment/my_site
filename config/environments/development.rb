@@ -19,4 +19,8 @@ config.action_mailer.delivery_method = :test
 
 Paperclip.options[:command_path] = '/opt/local/bin'
 
+# reCaptcha Keys
+RCC_PUB='6LelR7sSAAAAAKGbVVygb6b6E5h_DsXHpyfupdjp'
+RCC_PRIV='6LelR7sSAAAAAIVMDumfknCz59zsoUARghpWmKQS'
+
 require 'ruby-debug'

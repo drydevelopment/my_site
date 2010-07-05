@@ -19,10 +19,11 @@
 			<dt><%= f.label :website %></dt>
 			<dd><%= f.text_field :website, :class => "text" %></dd>
 		<% end %>
-
-		<%= f.hidden_field :post_id, :value => @post.id %>
-		
-		<dd><%= f.submit "Add Comment" %></dd>
 	</dl>
+
+	<%= f.hidden_field :post_id, :value => @post.id %>
+	<%= get_captcha(:options => {:theme => 'red', :tabindex => 10}) %>
+	
+	<p><%= f.submit "Add Comment" %></p>
 
 <% end %>

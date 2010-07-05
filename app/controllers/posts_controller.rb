@@ -106,7 +106,7 @@ class PostsController < ApplicationController
   def add_comment
     @post = Post.find(params[:id])
     @comment = Comment.new(params[:comment])
-	if @comment.save
+	if validate_recap(params, @comment.errors) && @comment.save
 		redirect_to @post
 	else
 		@page_title = @post.title
