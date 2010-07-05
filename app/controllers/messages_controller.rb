@@ -1,8 +1,10 @@
 class MessagesController < ApplicationController
-  before_filter :login_required, :except => [:new, :create, :thank_you]
+  before_filter :login_required, :except => [:index, :new, :create, :thank_you]
   
   def index
-    @messages = Message.all
+    @message = Message.new(params[:contact])
+    @page_title = 'Contact'
+	render :action => "new"	
   end
 
   def show
@@ -20,11 +22,10 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(params[:message])
-
     if @message.save
       flash[:notice] = 'Your message was successfully sent.'
-      redirect_to '/contact/thank-you'
-    else
+      render :action => "thank_you"
+	else
       render :action => "new"
     end
   end

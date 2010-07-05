@@ -698,7 +698,7 @@ ADMIN
 CONTACT PAGE
 ++++++++++++++++++++++++
 */
-#contacts form {
+form.contact {
 	background: #DDD;
 	display: block;
 	width: 555px;
@@ -707,8 +707,8 @@ CONTACT PAGE
 	-webkit-border-radius: 4px;
 	
 }
-#contacts form input.text,
-#contacts form textarea {
+form.contact input.text,
+form.contact textarea {
 	width: 440px;
 	border: 1px solid #AAA;
 	background: #BBB;
@@ -719,18 +719,18 @@ CONTACT PAGE
 	padding: 6px 4px 4px 6px;
 	margin: 0 27px 0 26px;
 }
-#contacts form input.text {
+form.contact input.text {
 	height: 26px;
 }
-#contacts form textarea {
+form.contact textarea {
 	height: 200px;
 }
-#contacts form div {
+form.contact div {
 	position: relative;
 	width: 500px;
 	margin: 0 auto;
 }
-#contacts form label.over-apply { 
+form.contact label.over-apply { 
 	color: #444;
 	font-size: 16px;
 	font-style: italic; 
@@ -738,22 +738,22 @@ CONTACT PAGE
 	top: 12px; 
 	left: 34px;
 }
-#contacts form div.submit { width: 450px; text-align: right; position: relative; top: -10px; }
-#contacts form div.submit input {
+form.contact div.submit { width: 450px; text-align: right; position: relative; top: -10px; }
+form.contact div.submit input {
 	width: 146px;
 	height: 62px;
 }
 #contacts #body div.secondary div.module.skype {padding-top: 6px;}
 
 /* CONTACT FORM - ERRORS */
-#contacts form span.fieldWithErrors label {
+form.contact span.fieldWithErrors label {
 	color: #D03E2D;
 }
-#contacts form span.fieldWithErrors input,
-#contacts form span.fieldWithErrors textarea {
+form.contact span.fieldWithErrors input,
+form.contact span.fieldWithErrors textarea {
 	border: 1px solid #D03E2D;
 }
-#contacts form div.formError {
+form.contact div.formError {
 	color: #D03E2D;
 	padding-left: 34px;
 	margin-bottom: 16px;
@@ -762,19 +762,19 @@ CONTACT PAGE
 }
 
 /* CONTACT FORM - THANK YOU  */
-#contacts.thank_you #body {
+#messages.thank_you #body {
 	padding-left: 0;
 	padding-bottom: 0;
 	background: none;
 }
-#contacts.thank_you #body h1 { width: auto; }
-#contacts #thank-you {
+#messages.thank_you #body h1 { width: auto; }
+#messages #thank-you {
 	padding: 10px 20px 20px 20px;
 	width: 916px;
 	background: #DDD;
 	border: 2px solid #DDD;
 }
-#contacts #thank-you p {
+#messages #thank-you p {
 	color: #337EA5;
 	font-size: 18px;
 }

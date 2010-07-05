@@ -1,0 +1,24 @@
+<div>
+	<p>
+	  <%= form.label :name, '* Name' %>
+	  <%= form.text_field :name, :class => 'text' %>
+	  <%= error_message_on :message, :name %>
+	</p>
+</div>
+<div>
+	<p>
+	  <%= form.label :email, '* Email' %>
+	  <%= form.text_field :email, :class => 'text' %>
+	  <%= error_message_on :message, :email %>
+	</p>
+</div>
+<div>
+	<p>
+	  <%= form.label :message, '* Message' %>
+	  <%= form.text_area :message %>
+	  <%= error_message_on :message, :message %>
+	</p>
+</div>
+<div class="submit">
+	<p><%= image_submit_tag 'email-send.jpg' %></p>
+</div>

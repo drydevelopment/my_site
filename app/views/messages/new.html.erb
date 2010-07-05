@@ -15,7 +15,9 @@
 
 <div class="primary">
 	<h1>Contact Me</h1>
-	<%= render :partial => 'shared/contact_form' %>
+	<% form_for @message, :url => { :action => "create" }, :html => { :class => "contact"} do |f| %>
+		<%= render :partial => 'form', :object => f %>
+	<% end %>
 </div>
 <div class="secondary">
 	<div class="module skype">
