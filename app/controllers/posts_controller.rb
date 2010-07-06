@@ -3,11 +3,7 @@ class PostsController < ApplicationController
   
   def index
     @page_title = 'Recent Blog Posts'
-    if logged_in?
-      @posts = Post.find_all_posts()
-    else
-      @posts = Post.published
-    end
+    @posts = Post.published
   end
 
   def show

@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts, :as => 'blog', :member => { :add_comment => :post }
+  map.resources :posts, :as => 'blog', :member => { :add_comment => :post, :tag => :get }
   map.resources :messages, :as => :contact, :collection => { :thank_you => :get }
   map.resources :users
   map.resources :portfolio_pictures

@@ -2,7 +2,7 @@
 	<h3>Tags</h3>
 	<p>
 	<% Tag.all.each do |tag| %>
-		<%= link_to tag.name, :controller => 'posts', :action => 'tag', :id => tag.name %>&nbsp;&nbsp;
+		<%= link_to tag.name, tag_post_url(tag.name) %>&nbsp;&nbsp;
 	<% end %>
 	</p>
 </div>
