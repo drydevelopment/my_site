@@ -845,7 +845,7 @@ div.comments form,
 	margin-top: -20px;
 }
 #posts div.primary div.post img { float: left; display: inline; margin: 0 10px 10px 0;}
-#posts div.secondary h3 { border-bottom: 1px solid #444; }
+div.secondary h3 { border-bottom: 1px solid #444; }
 #posts div.secondary ul { padding: 6px 0 0 0; }
 #posts div.secondary li { padding: 0 0 6px 0; }
 #posts div.secondary.preview { background: url(/images/preview.gif) no-repeat top right; }
