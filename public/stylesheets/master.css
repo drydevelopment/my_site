@@ -230,7 +230,7 @@ h3 { color: #CCC; }
 	#body div.secondary div.module {
 		margin: 0 0 16px 0;
 	}
-	#body div.secondary div.module p { font-size: 14px; }
+	#body div.secondary div.module p { font-size: 14px; color: #CCC; }
 	#body div.secondary div.module a { background: #333; }
 #body div.column { 
 	width: 269px; 
