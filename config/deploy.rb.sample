@@ -40,5 +40,6 @@ set :use_sudo, false
 
 after "deploy:symlink" do
 	run "cp #{applicationdir}shared/database.yml #{applicationdir}current/config/database.yml"
+	run "touch #{applicationdir}current/tmp.restart.txt"
 end
 
