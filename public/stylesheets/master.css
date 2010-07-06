@@ -205,7 +205,7 @@ BODY
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 }
-#body h2 { 
+h2 { 
 	color: #337EA5; 
 	background: #DDD; 
 	font-family: Helvetica; 
@@ -475,6 +475,7 @@ body.about div.secondary img {
 	margin: 6px 0 0 0;
 }
 body.about h2 {
+	color: #333;
 	-moz-border-radius-topright: 4px;
 	-moz-border-radius-topleft: 4px;
 	-webkit-border-top-right-radius: 4px;
