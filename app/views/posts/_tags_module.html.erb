@@ -1,10 +1,8 @@
-<% if @tags %>
 <div class="module">
 	<h3>Tags</h3>
-	<ul>
-	<% @tags.each do |tag| %>
-		<li><%= link_to tag.name, :controller => 'posts', :action => 'tag', :id => tag.name %></li>
+	<p>
+	<% Tag.all.each do |tag| %>
+		<%= link_to tag.name, :controller => 'posts', :action => 'tag', :id => tag.name %>&nbsp;&nbsp;
 	<% end %>
-	</ul>
+	</p>
 </div>
-<% end %>

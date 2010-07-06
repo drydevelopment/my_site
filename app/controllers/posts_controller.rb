@@ -6,19 +6,13 @@ class PostsController < ApplicationController
     if logged_in?
       @posts = Post.find_all_posts()
     else
-      @posts = Post.find_published_posts()
-    end
-    @tags = Tag.find(:all, :order => 'name ASC') # Tags Module
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @posts }
+      @posts = Post.published
     end
   end
 
   def show
     @post = Post.find(params[:id])
-	@comment = Comment.new
+	  @comment = Comment.new
     if !@post.is_published? and !logged_in?
       render_missing_page
     else
@@ -26,12 +20,7 @@ class PostsController < ApplicationController
       @page_title = @post.title
       @meta_description = @post.meta_description
       @meta_keywords = @post.meta_keywords
-      @other_posts = Post.find_all_posts_exclusively(@post) # Other Posts Module
-      @tags = Tag.find(:all, :order => 'name ASC') # Tags Module
-      respond_to do |format|
-        format.html # show.html.erb
-        format.xml  { render :xml => @post }
-      end
+      @other_posts = Post.exclusive(@post, 5) # Other Posts Module
     end
   end
   
@@ -42,11 +31,6 @@ class PostsController < ApplicationController
       @tag_name = params[:id]
       @page_title = @tag_name + ' - Tag'
       @posts = Post.find_tagged_with(@tag_name, :order => 'created_at DESC')
-      @tags = Tag.find(:all, :order => 'name ASC') # Tags Module
-    
-      respond_to do |format|
-        format.html #tag.html.erb
-      end
     end
   end
 

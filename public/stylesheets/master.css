@@ -229,9 +229,22 @@ h3 { color: #CCC; }
 }
 	#body div.secondary div.module {
 		margin: 0 0 16px 0;
+		font: 14px Arial;
+		line-height: 150%;
 	}
-	#body div.secondary div.module p { font-size: 14px; color: #CCC; }
-	#body div.secondary div.module a { background: #333; }
+		#body div.secondary div.module h3 { 
+			margin-bottom: 8px; 
+			padding-bottom: 8px; 
+			font-family: Georgia;
+		}
+		#body div.secondary div.module li { 
+			font-size: 14px; 
+			color: #888; 
+			padding: 0 0 8px;
+		}
+		#body div.secondary div.module p { font-size: 14px; color: #CCC; }
+		#body div.secondary div.module a { background: #333; text-decoration: none; }
+		#body div.secondary div.module a:hover { text-decoration: underline; }
 #body div.column { 
 	width: 269px; 
 	padding: 0 0 0 0;
