@@ -303,25 +303,25 @@ FOOTER
 HOME
 ++++++++++++++++++++++++
 */
-#home #body {
+body.home #body {
 	padding-left: 0;
 	background: none;
 }
-#home #body h1 { background: none; font-size: 34px; padding:6px 0; margin: 0; }
-#home #body h2 { background: none; color: #D03E2D; }
-#home #banner {
+body.home #body h1 { background: none; font-size: 34px; padding:6px 0; margin: 0; }
+body.home #body h2 { background: none; color: #D03E2D; }
+body.home #banner {
 	height: 248px;
 	width: 958px;
 	border: 1px solid #FFF;
 	background: url(/images/banner-background.jpg) repeat-x;
 	margin-bottom: 2px;
 }
-#home #banner div.primary {
+body.home #banner div.primary {
 	width: 350px;
 	padding: 24px 0 0 30px;
 	float: left;
 }
-#home #banner div.secondary {
+body.home #banner div.secondary {
 	width: 500px;
 	margin: 6px 24px 0 0;
 	padding-right: 0;
@@ -329,19 +329,19 @@ HOME
 	float: right;
 	display: inline;
 }
-#home #body h1,
-#home #banner p {
+body.home #body h1,
+body.home #banner p {
 	width: 350px;
 	color: #21526C;
 }
-#home #banner p {
+body.home #banner p {
 	font-size: 14px;
 	padding: 6px 0;
 }
-#home #banner ul li {
+body.home #banner ul li {
 	display: none;
 }
-#home #main {
+body.home #main {
 	float: left;
 	width: 960px;
 	margin-top: 2px;
@@ -394,31 +394,31 @@ HOME
 	}
 
 /* MAIN CONTENT */
-#home #main div.column {
+body.home #main div.column {
 	float: left;
 	font-family: Arial;
 	background: url(/images/opaque-background.jpg) repeat-x;
 }
-#home #main h2 {
+body.home #main h2 {
 	padding: 16px 0 16px 0;
 }
 
 /* FEATURED WORK */
-#home #work {
+body.home #work {
 	padding: 0 24px 24px;
 	width: 242px;
 }
-	#home #work li {
+	body.home #work li {
 		float: left;
 		width: 110px;
 		height: 110px;
 		margin: 0 8px 8px 0;
 	}
-	#home #work img {
+	body.home #work img {
 		width: 100px;
 		height: 100px;
 	}
-	#home #work a {
+	body.home #work a {
 		display: block;
 		width: 101px;
 		height: 101px;
@@ -426,18 +426,18 @@ HOME
 		border: 1px solid #444;
 		background: #333;
 	}
-	#home #work a:hover {
+	body.home #work a:hover {
 		background: #444;
 	}
 
 /* SERVICES */
-#home #services {
+body.home #services {
 	padding: 0 24px 16px;
 	margin: 0 20px;
 	width: 232px;
 	height: 292px;
 }
-	#home #services li {
+	body.home #services li {
 		background: url(/images/checkmark.gif) no-repeat;
 		height: 32px;
 		line-height: 32px;
@@ -445,43 +445,42 @@ HOME
 	}
 
 /* RECENT POSTS */
-#home #posts {
+body.home #posts {
 	padding: 0 24px 16px;
 	width: 302px;
 	height: auto;
 }
-	#home #posts li {
-		/*background: url(/images/under-construction.gif) no-repeat;*/
+	body.home #posts li {
 		font-size: 20px;
 		padding: 0 0 8px 0;
 	}
-		#home #posts li a { text-decoration: underline; }
-		#home #posts li a:hover { text-decoration: none; }
-		#home #posts li span {
+		body.home #posts li a { text-decoration: underline; }
+		body.home #posts li a:hover { text-decoration: none; }
+		body.home #posts li span {
 			font: italic 10px Verdana;
 			color: #999;
 			display: block;
 			padding-left: 4px;
 		}
-	#home #body a { background-color: none; }
+	body.home #body a { background-color: none; }
 	
 /*
 ++++++++++++++++++++++++
 ABOUT
 ++++++++++++++++++++++++
 */
-#about div.primary p { color: #333; padding: 0 16px 8px 16px; background: #DDD; margin-bottom: 16px; }
-#about div.secondary img {
+body.about div.primary p { color: #333; padding: 0 16px 8px 16px; background: #DDD; margin-bottom: 16px; }
+body.about div.secondary img {
 	border: 10px solid #222;
 	margin: 6px 0 0 0;
 }
-#about h2 {
+body.about h2 {
 	-moz-border-radius-topright: 4px;
 	-moz-border-radius-topleft: 4px;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-top-left-radius: 4px;
 }
-#about p {
+body.about p {
 	-moz-border-radius-bottomright: 4px;
 	-moz-border-radius-bottomleft: 4px;
 	-webkit-border-bottom-right-radius: 4px;
