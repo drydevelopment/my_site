@@ -123,6 +123,7 @@ HEADER
 	margin: 0 auto 16px auto;
 	border: 1px solid #444;
 	background: #333;
+	opacity: 0.6;
 }
 #header ul {
 	font-family: Arial;
@@ -314,12 +315,14 @@ body.home #banner {
 	width: 958px;
 	border: 1px solid #FFF;
 	background: url(/images/banner-background.jpg) repeat-x;
+	opacity: 0.8
 	margin-bottom: 2px;
 }
 body.home #banner div.primary {
 	width: 350px;
 	padding: 24px 0 0 30px;
 	float: left;
+	opacity: 1;
 }
 body.home #banner div.secondary {
 	width: 500px;
@@ -328,6 +331,7 @@ body.home #banner div.secondary {
 	padding-top: 0;
 	float: right;
 	display: inline;
+	opacity: 1;
 }
 body.home #body h1,
 body.home #banner p {
