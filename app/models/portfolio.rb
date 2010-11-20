@@ -1,6 +1,10 @@
 class Portfolio < ActiveRecord::Base
   has_friendly_id :name, :use_slug => true
   has_many :portfolio_pictures
+
+	def featured?
+		self.is_featured?
+	end
   
   class << self
     def find_featured
