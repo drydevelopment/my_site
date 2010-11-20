@@ -1,0 +1,14 @@
+# .gems generated gem export file. Note that any env variable settings will be missing. Append these after using a ';' field separator
+columnize -v0.3.2
+diff-lcs -v1.1.2
+faker -v0.3.1
+linecache -v0.43
+mysql -v2.8.1
+rspec -v1.3.0
+rspec-core -v2.1.0
+rspec-expectations -v2.1.0
+rspec-mocks -v2.1.0
+rspec-rails -v1.3.2
+ruby-debug -v0.10.4
+ruby-debug-base -v0.10.4
+shoulda -v2.11.3
