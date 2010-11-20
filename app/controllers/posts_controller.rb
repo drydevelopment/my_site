@@ -32,30 +32,21 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @post }
-    end
-  end
-
-  def edit
-    @post = Post.find(params[:id])
   end
 
   def create
     @post = Post.new(params[:post])
 
-    respond_to do |format|
-      if @post.save
-        flash[:notice] = 'Post was successfully created.'
-        format.html { redirect_to(@post) }
-        format.xml  { render :xml => @post, :status => :created, :location => @post }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @post.errors, :status => :unprocessable_entity }
-      end
-    end
+		if @post.save
+			flash[:notice] = 'Post was successfully created.'
+			redirect_to @post
+		else
+			render :action => "new"
+		end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
   end
 
   def update

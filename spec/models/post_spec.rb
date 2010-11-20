@@ -38,4 +38,28 @@ describe Post do
 
 	end
 
+	describe "validates" do
+
+		context "presence of" do
+
+			before(:each) do
+				@post = Post.new(:title => Faker::Lorem.words(5))
+			end
+
+			it "#title" do
+				@post.title = nil
+				@post.valid?.should_not be_true
+				@post.errors[:title].should == "can't be blank"
+			end
+
+			it "#body" do
+				@post.body = nil
+				@post.valid?.should_not be_true
+				@post.errors[:body].should == "can't be blank"
+			end
+
+		end
+
+	end
+
 end
