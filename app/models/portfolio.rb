@@ -4,16 +4,11 @@ class Portfolio < ActiveRecord::Base
 	
 	validates_presence_of :name, :url, :description, :specs
 
+	default_scope :order => "portfolios.created_at DESC"
+	named_scope :featured, :conditions => { :is_featured => true }
+	named_scope :not_featured, :conditions => { :is_featured => false }
+
 	def featured?
 		self.is_featured?
 	end
-  
-  class << self
-    def find_featured
-      self.find(:all, :conditions => "is_featured = 1")
-    end
-    def find_not_featured
-      self.find(:all, :conditions => "is_featured = 0")
-    end
-  end
 end
