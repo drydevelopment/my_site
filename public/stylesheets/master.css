@@ -511,14 +511,14 @@ WORK
 	-webkit-border-radius: 4px;
 }
 #portfolios.index #body div.portfolio-piece a.featured {
-	padding: 9px 9px 9px 9px;
 	background: #BBB;
 	border: 1px solid #BBB;
-	height: 130px;
-	width: 200px;
 	display: block;
 	float: left;
 	margin: 0 16px 0 0;
+}
+#portfolios.index #body div.portfolio-piece a.featured img {
+	padding: 9px;
 }
 #portfolios.index #body div.secondary div.portfolios a,
 #portfolios.edit #body div.secondary img {
