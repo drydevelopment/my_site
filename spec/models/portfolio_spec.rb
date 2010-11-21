@@ -34,4 +34,43 @@ describe Portfolio do
 
 	end
 
+	describe "validates" do
+
+		context "presence of" do
+
+			before(:each) do
+				@portfolio = Portfolio.new	:name => Faker::Lorem.words,
+																		:url => Faker::Internet.domain_name,
+																		:description => Faker::Lorem.paragraph,
+																		:specs => Faker::Lorem.paragraph
+			end
+
+			it "#name" do
+				@portfolio.name = nil
+				@portfolio.valid?.should_not be_true
+				@portfolio.errors[:name].should == "can't be blank"
+			end
+
+			it "#url" do
+				@portfolio.url = nil
+				@portfolio.valid?.should_not be_true
+				@portfolio.errors[:url].should == "can't be blank"
+			end
+
+			it "#description" do
+				@portfolio.description = nil
+				@portfolio.valid?.should_not be_true
+				@portfolio.errors[:description].should == "can't be blank"
+			end
+
+			it "#specs"do
+				@portfolio.specs = nil
+				@portfolio.valid?.should_not be_true
+				@portfolio.errors[:specs].should == "can't be blank"
+			end
+
+		end
+
+	end
+
 end

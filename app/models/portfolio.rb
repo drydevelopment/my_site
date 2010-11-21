@@ -1,6 +1,8 @@
 class Portfolio < ActiveRecord::Base
   has_friendly_id :name, :use_slug => true
   has_many :portfolio_pictures
+	
+	validates_presence_of :name, :url, :description, :specs
 
 	def featured?
 		self.is_featured?
